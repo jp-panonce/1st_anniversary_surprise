@@ -1,11 +1,11 @@
 body
 {
-  background-image: linear-gradient(to right top, #1f0537, #0c4560, #70b4c9, #2058d1, #619ec7);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
+
 
 .card {
 	 position: relative;

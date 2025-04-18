@@ -1,21 +1,23 @@
 // trigger to play music in the background with sweetalert
 window.addEventListener('load', () => {
-    Swal.fire({
-        title: 'Can we play music in the background?',
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonColor: '#3085d6',
-        cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes',
-        cancelButtonText: 'No',
-    }).then((result) => {
-        if (result.isConfirmed) {
-            document.querySelector('.song').play();
-            animationTimeline();
-        } else {
-            animationTimeline();
-        }
-    });
+    // Swal.fire({
+    //     title: 'Can we play music in the background?',
+    //     icon: 'warning',
+    //     showCancelButton: true,
+    //     confirmButtonColor: '#3085d6',
+    //     cancelButtonColor: '#d33',
+    //     confirmButtonText: 'Yes',
+    //     cancelButtonText: 'No',
+    // }).then((result) => {
+    //     if (result.isConfirmed) {
+    //         document.querySelector('.song').play();
+    //         animationTimeline();
+    //     } else {
+    //         animationTimeline();
+    //     }
+    // });
+    document.querySelector('.song').play();
+    animationTimeline();
 });
 
 

@@ -44,6 +44,7 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flip_card.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
@@ -78,28 +79,39 @@
 							
 							<!-- <div class="simply-countdown simply-countdown-one"></div> -->
 							<!-- <h2><i>April 22, 2025</i></h2> -->
-							<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;"></div>
-									<style>
-										button:hover {
-											transform: scale(1.1);
-											transition: transform 0.3s ease;
-										}
-									</style>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px; fill:white;" onclick="window.location.href='card.html';">
-										<img src="images/greetings1.svg" alt="Greetings" style="fill: white;">
-										<br><br>
-										<i>Card</i>
-									</button>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='pick_a_message.html';">
-										<img src="images/bottle_heart.svg" alt="Greetings" style="fill: white;">
-										<br><br>
-										<p>Bottle</p>
-									</button>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='our_story.html';">
-										<img src="images/story_milestone.svg" alt="Greetings" style="fill: white;">
-										<br><br>
-										<p>Our Story</p>
-									</button>
+							<div class="flip-card-container" style="--hue: 220; display: flex; align-items: center; justify-content: center;">
+								<div class="flip-card">
+								  <div class="card-front">
+									<figure>
+									  <div class="img-bg"></div>
+									  <img src="https://images.unsplash.com/photo-1486162928267-e6274cb3106f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+									  <figcaption>Why you're awesome</figcaption>
+									</figure>
+									<p style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); margin: 0;">Click/Hover to flip</p>
+								  </div>
+							  
+								  <div class="card-back">
+									<figure>
+									  <div class="img-bg"></div>
+									  <img src="https://images.unsplash.com/photo-1486162928267-e6274cb3106f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60">
+									</figure>
+							  
+									<!-- <button>Book</button> -->
+									<p style="font-size: 20px; color: antiquewhite;">Detail 1 asjdflsdjflskdjflskdjf;lasdj</p>
+							  
+									<div class="design-container">
+									  <span class="design design--1"></span>
+									  <span class="design design--2"></span>
+									  <span class="design design--3"></span>
+									  <span class="design design--4"></span>
+									  <span class="design design--5"></span>
+									  <span class="design design--6"></span>
+									  <span class="design design--7"></span>
+									  <span class="design design--8"></span>
+									</div>
+								  </div>
+							  
+								</div>
 							</div>
 						</div>
 					</div>

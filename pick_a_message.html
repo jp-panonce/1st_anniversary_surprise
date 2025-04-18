@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>1st Anniversary | JP & Clyde</title>
-	<meta name="viewport" content="height=device-height, initial-scale=1">
+	<meta name="viewport" content="width=device-width, =device-height, initial-scale=1">
 	<meta name="description" content="" />
 	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
 	<meta name="author" content="-" />
@@ -31,17 +31,20 @@
 
 	<!-- Theme style  -->
 	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flip_card.css">
 
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 
+	<script src="js/pick_new_message.js"></script>
+
 	</head>
 	<body>
-		<!-- <audio class="song" loop autoplay>
+		<audio class="song" loop autoplay>
 			<source src="./music/hbd.mpeg">
 			</source>
 			Your browser isn't invited for super fun audio time.
-		</audio> -->
+		</audio>
 	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg); height: 100vh; background-size: cover; background-position: center;" data-stellar-background-ratio="0.5">
 		<div class="overlay" style="height: 100%;"></div>
 		<div class="container" style="height: 100%;">
@@ -49,13 +52,50 @@
 				<div class="col-md-8 col-md-offset-2 text-center" style="height: 100%; display: flex; align-items: center; justify-content: center;">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h2><i>countdown till the big surprise</i></h2>
-							<div class="simply-countdown simply-countdown-one"></div>
-							
-							<!-- <button class="visible_after_date" style="visibility: hidden;"><a href="choose_a_surprise.html">EY</a></button> -->
-							<p><a href="greetings.html" class="btn btn-default visible_after_date" style="visibility: hidden;">CLICK FOR THE SURPRISE</a></p>
+							<h1 style="font-size: 40px;  ">A Message for you</h1>
+							<p>remember my random message bottle gift??<br>things just got digital<br>• ^_^</p>
+							<p></p>
 							<br>
-							<img class="invisible_after_date" src="images/dudu-waiting-dudu-cute.gif" style="width: 150px;visibility: visible;"></img>
+							
+                            <div class="flip-card-container" style="--hue: 220; display: flex; align-items: center; justify-content: center;">
+								<div class="flip-card">
+								  <div class="card-front">
+									<figure>
+									  <div class="img-bg"></div>
+									  <img src="images/nature_background_1.avif">
+									  <figcaption id="random_message_category">Why you're awesome</figcaption>
+									</figure>
+									
+									<p style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); margin: 0;">Click/Hover to flip</p>
+								  </div>
+							  
+								  <div class="card-back">
+									<figure>
+									  <div class="img-bg"></div>
+									  <img src="images/nature_background_1.avif">
+									</figure>
+
+							  
+									<!-- <button>Book</button> -->
+									<p style="font-size: 20px; color: antiquewhite; padding: 10px 10px 10px 10px;" id="random_message"> your amazing personality</p>
+									<br>
+									<p style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); margin: 0;" id="message_subtitle">Up</p>
+							  
+									<div class="design-container">
+									  <span class="design design--1"></span>
+									  <span class="design design--2"></span>
+									  <span class="design design--3"></span>
+									  <span class="design design--4"></span>
+									  <span class="design design--5"></span>
+									  <span class="design design--6"></span>
+									  <span class="design design--7"></span>
+									  <span class="design design--8"></span>
+									</div>
+								  </div>
+							  
+								</div>
+							</div>
+							<button onclick="pickRandomMessage()">Click to Pick Random</button>
 						</div>
 					</div>
 				</div>
@@ -88,45 +128,10 @@
 		<script src="js/main.js"></script>
 
 		<script>
-			var d = new Date(2025, 3, 17); //insert date here (April is month 3 as months are zero-based)
-
-			// default example
-			simplyCountdown('.simply-countdown-one', {
-				year: d.getFullYear(),
-				month: d.getMonth()+1,
-				day: d.getDate()
-			});
-
-			//jQuery example
-			$('#simply-countdown-losange').simplyCountdown({
-				year: d.getFullYear(),
-				month: d.getMonth(),
-				day: d.getDate(),
-				enableUtc: false
+			document.addEventListener("DOMContentLoaded", function() {
+				pickRandomMessage();
 			});
 			
-			document.addEventListener('DOMContentLoaded', function() {
-				const elements_to_show = document.getElementsByClassName("visible_after_date");
-				const elements_to_hide = document.getElementsByClassName("invisible_after_date");
-				const specificDate = d;
-
-				const currentDate = new Date();
-				console.log(specificDate)
-				console.log(currentDate)
-				console.log(currentDate > d)
-				if (currentDate > d) {
-					console.log("EY")
-					for (let i = 0; i < elements_to_show.length; i++) {
-						elements_to_show[i].style.visibility = 'visible';
-					}
-					for (let i = 0; i < elements_to_hide.length; i++) {
-						elements_to_hide[i].style.visibility = 'hidden';
-					}
-				} else {
-					console.log("ey")
-				}
-			});
-
 		</script>
 
 	</body>
