@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>1st Anniversary | JP & Clyde</title>
+	<meta name="viewport" content="height=device-height, initial-scale=1">
+	<meta name="description" content="Free HTML5 Template by -" />
+	<meta name="keywords" content="free html5, free template, free bootstrap, html5, css3, mobile first, responsive" />
+	<meta name="author" content="-" />
+
+	<link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+	
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Owl Carousel  -->
+	<link rel="stylesheet" href="css/owl.carousel.min.css">
+	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" href="css/style.css">
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+
+	</head>
+	<body>
+	<header id="fh5co-header" class="fh5co-cover" role="banner" style="background-image:url(images/img_bg_2.jpg); height: 100vh; background-size: cover; background-position: center;" data-stellar-background-ratio="0.5">
+		<div class="overlay" style="height: 100%;"></div>
+		<div class="container" style="height: 100%;">
+			<div class="row" style="height: 100%;">
+				<div class="col-md-8 col-md-offset-2 text-center" style="height: 100%; display: flex; align-items: center; justify-content: center;">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h2><i>countdown till the big surprise</i></h2>
+							<div class="simply-countdown simply-countdown-one"></div>
+							
+							<!-- <button class="visible_after_date" style="visibility: hidden;"><a href="choose_a_surprise.html">EY</a></button> -->
+							<p><a href="greetings.html" class="btn btn-default visible_after_date" style="visibility: hidden;">CLICK FOR THE SURPRISE</a></p>
+							<br>
+							<img class="invisible_after_date" src="images/dudu-waiting-dudu-cute.gif" style="width: 150px;visibility: visible;"></img>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+
+		<!-- jQuery -->
+		<script src="js/jquery.min.js"></script>
+		<!-- jQuery Easing -->
+		<script src="js/jquery.easing.1.3.js"></script>
+		<!-- Bootstrap -->
+		<script src="js/bootstrap.min.js"></script>
+		<!-- Waypoints -->
+		<script src="js/jquery.waypoints.min.js"></script>
+		<!-- Carousel -->
+		<script src="js/owl.carousel.min.js"></script>
+		<!-- countTo -->
+		<script src="js/jquery.countTo.js"></script>
+
+		<!-- Stellar -->
+		<script src="js/jquery.stellar.min.js"></script>
+		<!-- Magnific Popup -->
+		<script src="js/jquery.magnific-popup.min.js"></script>
+		<script src="js/magnific-popup-options.js"></script>
+
+		<!-- // <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/0.0.1/prism.min.js"></script> -->
+		<script src="js/simplyCountdown_true.js"></script>
+		<!-- Main -->
+		<script src="js/main.js"></script>
+
+		<script>
+			var d = new Date(2025, 3, 17); //insert date here (April is month 3 as months are zero-based)
+
+			// default example
+			simplyCountdown('.simply-countdown-one', {
+				year: d.getFullYear(),
+				month: d.getMonth()+1,
+				day: d.getDate()
+			});
+
+			//jQuery example
+			$('#simply-countdown-losange').simplyCountdown({
+				year: d.getFullYear(),
+				month: d.getMonth(),
+				day: d.getDate(),
+				enableUtc: false
+			});
+			
+			document.addEventListener('DOMContentLoaded', function() {
+				const elements_to_show = document.getElementsByClassName("visible_after_date");
+				const elements_to_hide = document.getElementsByClassName("invisible_after_date");
+				const specificDate = d;
+
+				const currentDate = new Date();
+				console.log(specificDate)
+				console.log(currentDate)
+				console.log(currentDate > d)
+				if (currentDate > d) {
+					console.log("EY")
+					for (let i = 0; i < elements_to_show.length; i++) {
+						elements_to_show[i].style.visibility = 'visible';
+					}
+					for (let i = 0; i < elements_to_hide.length; i++) {
+						elements_to_hide[i].style.visibility = 'hidden';
+					}
+				} else {
+					console.log("ey")
+				}
+			});
+
+		</script>
+
+	</body>
+</html>
+
