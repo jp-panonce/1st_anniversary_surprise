@@ -57,7 +57,16 @@
 							<p></p>
 							<br>
 							
-                            <div class="flip-card-container" style="--hue: 220; display: flex; align-items: center; justify-content: center;">
+							<div class="flip-card-container" style="--hue: 220; display: flex; align-items: center; justify-content: center; margin: auto; opacity: 0; transition: opacity 1s ease-in;">
+								<script>
+									document.addEventListener("DOMContentLoaded", function() {
+										setTimeout(function() {
+											document.querySelector('.flip-card-container').style.opacity = 1;
+											document.querySelector('.button_click_new_message').style.opacity = 1;
+											document.querySelector('.another_surprise_click').style.opacity = 1;
+										}, 2000);
+									});
+								</script>
 								<div class="flip-card">
 								  <div class="card-front">
 									<figure>
@@ -65,21 +74,22 @@
 									  <img src="images/nature_background_1.avif">
 									  <figcaption id="random_message_category">Why you're awesome</figcaption>
 									</figure>
+									<img src="images/bubu-dudu-cuddle.gif" style="width: 60%; height: auto;">
 									
 									<p style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); margin: 0;">Click/Hover to flip</p>
 								  </div>
 							  
 								  <div class="card-back">
+									
 									<figure>
 									  <div class="img-bg"></div>
 									  <img src="images/nature_background_1.avif">
 									</figure>
-
-							  
-									<!-- <button>Book</button> -->
+									
 									<p style="font-size: 20px; color: antiquewhite; padding: 10px 10px 10px 10px;" id="random_message"> your amazing personality</p>
-									<br>
+									
 									<p style="position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); margin: 0;" id="message_subtitle">Up</p>
+									
 							  
 									<div class="design-container">
 									  <span class="design design--1"></span>
@@ -95,7 +105,8 @@
 							  
 								</div>
 							</div>
-							<button onclick="pickRandomMessage()">Click to Pick Random</button>
+							<button class="button_click_new_message" onclick="pickRandomMessage()" style="margin-top: 20px; opacity: 0; transition: opacity 2s ease-in;" class="button-4" role="button">Click for a New Message</button>
+							<p class="another_surprise_click" style="opacity: 0; transition: opacity 1s ease-in;margin-top: 20px;font-size: 10px;"><a href="choose_a_surprise.html" class="visible_after_date" style="color: rgb(35, 169, 202);">CHOOSE ANOTHER SURPRISE</a></p>
 						</div>
 					</div>
 				</div>

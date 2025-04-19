@@ -9,7 +9,7 @@ const all_messages = [
     [["Why you're awesome"],[" I admire your confidence"]],
     [["Why you're awesome"],[" I like it when you laugh"]],
     [["Why you're awesome"],[" You tell the best stories"]],
-    [["Why you're awesome"],[" I lover your sense of humor"]],
+    [["Why you're awesome"],[" I love your sense of humor"]],
     [["Why you're awesome"],[" you color my world"]],
     [["Why you're awesome"],[" you always know how to make me smile"]],
     [["Why you're awesome"],[" you are resilient"]],
