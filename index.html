@@ -55,7 +55,22 @@
 							<!-- <button class="visible_after_date" style="visibility: hidden;"><a href="choose_a_surprise.html">EY</a></button> -->
 							<p><a href="greetings.html" class="btn btn-default visible_after_date" style="visibility: hidden;">CLICK FOR THE SURPRISE</a></p>
 							<br>
-							<img class="invisible_after_date" src="images/dudu-waiting-dudu-cute.gif" style="width: 150px;visibility: visible;"></img>
+							<img class="invisible_after_date" id="changing-image" src="images/dudu-waiting-dudu-cute.gif" style="width: 150px; visibility: visible;"></img>
+							<img class="visible_after_date" src="images/bubu-cute-dancing.gif" style="width: 150px; visibility: hidden;"></img>
+							<script>
+								const imageElement = document.getElementById('changing-image');
+								const imageSources = [
+									'images/dudu-waiting-dudu-cute.gif',
+									'images/dudu-waiting-waiting-for-you.gif',
+									'images/bubu-waiting.gif'
+								];
+								let currentIndex = 0;
+
+								setInterval(() => {
+									currentIndex = (currentIndex + 1) % imageSources.length;
+									imageElement.src = imageSources[currentIndex];
+								}, 5000);
+							</script>
 						</div>
 					</div>
 				</div>
@@ -88,12 +103,12 @@
 		<script src="js/main.js"></script>
 
 		<script>
-			var d = new Date(2025, 3, 17); //insert date here (April is month 3 as months are zero-based)
-
+			var d = new Date(2025, 3, 19); //insert date here (April is month 3 as months are zero-based)
+			console.log("d",d)
 			// default example
 			simplyCountdown('.simply-countdown-one', {
 				year: d.getFullYear(),
-				month: d.getMonth()+1,
+				month: d.getMonth(),
 				day: d.getDate()
 			});
 

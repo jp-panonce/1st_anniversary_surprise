@@ -91,24 +91,31 @@ const all_messages = [
     [["Quote/Verse/Lyrics"],["You're the peanut butter to my jelly"],["- Unknown"]],
     [["Quote/Verse/Lyrics"],["You're the apple of my eye, You're the straw to my berry"],["- Perfect Two | Auburn"]],
     [["Quote/Verse/Lyrics"],["Ikaw nga ba ang icing sa ibabaw ng cupcake ko?"],["- Kim CHiu | Mr. Right"]]
+]
 
-
+const all_gifs = [
+    "bubu-cute-dancing.gif",
+    "bubu-dudu-cuddle.gif",
+    "dudu_flying_kiss.gif",
+    "dudu-bubu-spin.gif",
+    "dudu-carrying-bubu.gif"
 ]
 
 function pickRandomMessage() {
     const randomIndex = Math.floor(Math.random() * all_messages.length);
+    const randomIndex_1 = Math.floor(Math.random() * all_gifs.length);
 
     const messageCategoryElement = document.getElementById("random_message_category");
     const messageElement = document.getElementById("random_message");
     const messageSubElement = document.getElementById("message_subtitle");
+    const messageCover = document.getElementById("message_cover");
 
     const thirdElement = (all_messages[randomIndex]).length==3 ? all_messages[randomIndex][2] : " ";
-    console.log(all_messages.length)
-    console.log(randomIndex)
     messageCategoryElement.textContent = "<3";
     setTimeout(() => {
         messageCategoryElement.textContent = all_messages[randomIndex][0];
         messageElement.textContent = all_messages[randomIndex][1];
+        messageCover.src = "images/" + all_gifs[randomIndex_1];
         if (thirdElement) {
             messageSubElement.textContent = all_messages[randomIndex][2];
         }
