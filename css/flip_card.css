@@ -101,24 +101,27 @@ img {
 
 /* figcaption */
 figcaption {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   width: auto;
-  margin-top: 12%;
-  padding: 8px 22px;
+  height: auto;
+  padding: 8px 1px;
 
   font-weight: bold;
   line-height: 1.6;
   letter-spacing: 2px;
   word-spacing: 6px;
-  text-align: right;
+  text-align: center;
 
   position: absolute;
-  top: 0;
-  right: 12px;
+  top: 40%; /* Adjusted to be 10% above the center */
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   color: var(--white-1);
-  background: hsla(var(--hue), 25%, 10%, .5);
+  background: hsla(var(--hue), 25%, 10%, .6);
 }
 
 /* .img-bg */

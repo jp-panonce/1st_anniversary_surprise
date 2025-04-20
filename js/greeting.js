@@ -106,7 +106,7 @@ const animationTimeline = () => {
     .to(".fake-btn", 0.1, {
         backgroundColor: "rgb(127, 206, 248)",
     },
-    "+=4")
+    "+=1")
     .to(
         ".four",
         0.5, {
@@ -270,5 +270,6 @@ const animationTimeline = () => {
     const replyBtn = document.getElementById("replay");
     replyBtn.addEventListener("click", () => {
         tl.restart();
+        document.querySelector('.song').play();
     });
 }
