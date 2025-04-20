@@ -57,20 +57,6 @@
 							<br>
 							<img id="changing-image" src="images/dudu-waiting-dudu-cute.gif" style="width: 150px; visibility: visible;"></img>
 							<!-- <img class="visible_after_date" src="images/bubu-cute-dancing.gif" style="width: 150px; visibility: hidden;"></img> -->
-							<script>
-								const imageElement = document.getElementById('changing-image');
-								const imageSources = [
-									'images/dudu-waiting-dudu-cute.gif',
-									'images/dudu-waiting-waiting-for-you.gif',
-									'images/bubu-waiting.gif'
-								];
-								let currentIndex = 0;
-
-								setInterval(() => {
-									currentIndex = (currentIndex + 1) % imageSources.length;
-									imageElement.src = imageSources[currentIndex];
-								}, 5000);
-							</script>
 						</div>
 					</div>
 				</div>
@@ -123,6 +109,7 @@
 			document.addEventListener('DOMContentLoaded', function() {
 				const elements_to_show = document.getElementsByClassName("visible_after_date");
 				const elements_to_hide = document.getElementsByClassName("invisible_after_date");
+				const imageElement = document.getElementById('changing-image');
 				const specificDate = d;
 
 				const currentDate = new Date();
@@ -138,7 +125,17 @@
 						elements_to_hide[i].style.visibility = 'hidden';
 					}
 				} else {
-					console.log("ey")
+					const imageSources = [
+						'images/dudu-waiting-dudu-cute.gif',
+						'images/dudu-waiting-waiting-for-you.gif',
+						'images/bubu-waiting.gif'
+					];
+					let currentIndex = 0;
+
+					setInterval(() => {
+						currentIndex = (currentIndex + 1) % imageSources.length;
+						imageElement.src = imageSources[currentIndex];
+					}, 5000);
 				}
 			});
 

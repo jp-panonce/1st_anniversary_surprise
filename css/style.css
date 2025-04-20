@@ -15,61 +15,27 @@
 }
 
 .button-4 {
-  appearance: none;
-  background-color: #FAFBFC;
-  border: 1px solid rgba(27, 31, 35, 0.15);
-  border-radius: 6px;
-  box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0, rgba(255, 255, 255, 0.25) 0 1px 0 inset;
-  box-sizing: border-box;
-  color: #24292E;
-  cursor: pointer;
+
+
   display: inline-block;
-  font-family: -apple-system, system-ui, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  outline: 0;
+  border: 0;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(72, 76, 122);
   font-size: 14px;
-  font-weight: 500;
-  line-height: 20px;
-  list-style: none;
-  padding: 6px 16px;
-  position: relative;
-  transition: background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  vertical-align: middle;
-  white-space: nowrap;
-  word-wrap: break-word;
+  height: 38px;
+  padding: 8px 24px;
+  border-radius: 50px;
+  background-image: linear-gradient(180deg,#fff,#f5f5fa);
+  box-shadow: 0 4px 11px 0 rgb(37 44 97 / 15%), 0 1px 3px 0 rgb(93 100 148 / 20%);
+  transition: all .2s ease-out;
+  :hover{
+      box-shadow: 0 8px 22px 0 rgb(37 44 97 / 15%), 0 4px 6px 0 rgb(93 100 148 / 20%);
+  }
+  
 }
 
-.button-4:hover {
-  background-color: #F3F4F6;
-  text-decoration: none;
-  transition-duration: 0.1s;
-}
-
-.button-4:disabled {
-  background-color: #FAFBFC;
-  border-color: rgba(27, 31, 35, 0.15);
-  color: #959DA5;
-  cursor: default;
-}
-
-.button-4:active {
-  background-color: #EDEFF2;
-  box-shadow: rgba(225, 228, 232, 0.2) 0 1px 0 inset;
-  transition: none 0s;
-}
-
-.button-4:focus {
-  outline: 1px transparent;
-}
-
-.button-4:before {
-  display: none;
-}
-
-.button-4:-webkit-details-marker {
-  display: none;
-}
 
 body {
   font-family: "Work Sans", Arial, sans-serif;
@@ -265,7 +231,7 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -822,13 +788,13 @@ h1, h2, h3, h4, h5, h6, figure {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
 }
 .fh5co-social-icons li a {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   color: #F14E95;
   padding-left: 10px;
   padding-right: 10px;
@@ -1285,7 +1251,7 @@ form label {
   display: -moz-inline-stack;
   display: inline-block;
   zoom: 1;
-  *display: inline;
+  display: inline;
   width: 100px;
   height: 100px;
 }
