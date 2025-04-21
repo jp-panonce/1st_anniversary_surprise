@@ -381,7 +381,7 @@
 							<h2><i>Let's find out</i></h2>
 							<br>
 							<br>
-							<h2 style="color: rgb(187, 193, 199);"><i>We've been together for</i></h2>
+							<h2 style="color: rgb(187, 193, 199); font-size:14px;"><i>together for</i></h2>
 							<div class="simply-countdown simply-countdown-one"></div>
 							
 							<br>
@@ -423,24 +423,24 @@
 	<script src="js/jquery.magnific-popup.min.js"></script>
 	<script src="js/magnific-popup-options.js"></script>
 
-	<script src="js/simplyCountdown_true.js"></script>
+	<script src="js/simplyCountdown.js"></script>
 	<!-- Main -->
 	<script src="js/main.js"></script>
 
 	<script>
-	var d = new Date(2026, 3, 22); //insert date here
+	var d = new Date(2024, 4, 22); //insert date here
 
     // default example
     simplyCountdown('.simply-countdown-one', {
         year: d.getFullYear(),
-        month: d.getMonth() + 1,
+        month: d.getMonth(),
         day: d.getDate()
     });
 
     //jQuery example
     $('#simply-countdown-losange').simplyCountdown({
         year: d.getFullYear(),
-        month: d.getMonth() + 1,
+        month: d.getMonth(),
         day: d.getDate(),
         enableUtc: false
     });

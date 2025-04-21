@@ -188,7 +188,7 @@
                 now = new Date();
                 if (parameters.enableUtc) {
                     nowUtc = new Date(now.getFullYear(), now.getMonth(), now.getDate(),
-                        now.getHours(), now.getMinutes(), now.getSeconds());
+                        now.getHours()-8, now.getMinutes(), now.getSeconds());
                     secondsLeft = (nowUtc.getTime() - targetDate)/1000;//(targetDate - nowUtc.getTime()) / 1000;
 
                 } else {

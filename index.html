@@ -91,7 +91,6 @@
 
 		<script>
 			var d = new Date(2025, 3, 21); //insert date here (April is month 3 as months are zero-based)
-			console.log("d",d)
 			// default example
 			simplyCountdown('.simply-countdown-one', {
 				year: d.getFullYear(),
@@ -115,9 +114,6 @@
 				const specificDate = d;
 
 				const currentDate = new Date();
-				console.log(specificDate)
-				console.log(currentDate)
-				console.log(currentDate > d)
 				if (currentDate > d) {
 					imageElement.src = "images/bubu-cute-dancing.gif";
 					for (let i = 0; i < elements_to_show.length; i++) {
