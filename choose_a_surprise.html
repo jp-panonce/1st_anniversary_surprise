@@ -87,21 +87,39 @@
 											transition: transform 0.3s ease;
 										}
 									</style>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px; fill:white;" onclick="window.location.href='anniversary_card.html';">
+									<script>
+										document.addEventListener("DOMContentLoaded", function () {
+											const buttons = document.querySelectorAll(".delayed-button");
+											buttons.forEach((button, index) => {
+												setTimeout(() => {
+													button.style.opacity = "1";
+													button.style.transform = "translateY(0)";
+												}, (index+1) * 500);
+											});
+										});
+									</script>
+									<style>
+										.delayed-button {
+											opacity: 0;
+											transform: translateY(20px);
+											transition: opacity 0.5s ease, transform 0.5s ease;
+										}
+									</style>
+									<button class="delayed-button" style="width: 100px; background: transparent; border: none; margin: 10px; fill:white;" onclick="window.location.href='anniversary_card.html';">
 										<img src="images/greetings1.svg" alt="Greetings" style="fill: white;">
 										<br><br>
 										<i>Card</i>
 									</button>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='pick_a_message.html';">
+									<button class="delayed-button" style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='pick_a_message.html';">
 										<img src="images/bottle_heart.svg" alt="Greetings" style="fill: white;">
 										<br><br>
 										<p>Bottle</p>
 									</button>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='our_story.html';">
+									<button class="delayed-button" style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='our_story.html';">
 										<img src="images/story_milestone.svg" alt="Greetings" style="fill: white;">
 										<br><br>
 										<p>Our Story</p>
-									</button>	
+									</button>
 							</div>
 						</div>
 						<!-- <div>
