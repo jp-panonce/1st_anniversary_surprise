@@ -50,7 +50,7 @@
 				<div class="col-md-8 col-md-offset-2 text-center" style="height: 100%; display: flex; align-items: center; justify-content: center;">
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
-							<h2 class="invisible_after_date"><i>countdown till the big surprise</i></h2>
+							<h2 id="main_title"><i>countdown till the big surprise</i></h2>
 							<div class="simply-countdown simply-countdown-one invisible_after_date"></div>
 							
 							<!-- <button class="visible_after_date" style="visibility: hidden;"><a href="choose_a_surprise.html">EY</a></button> -->
@@ -110,6 +110,7 @@
 			document.addEventListener('DOMContentLoaded', function() {
 				const elements_to_show = document.getElementsByClassName("visible_after_date");
 				const elements_to_hide = document.getElementsByClassName("invisible_after_date");
+				const main_title_element = document.getElementById('main_title'); 
 				const imageElement = document.getElementById('changing-image');
 				const specificDate = d;
 
@@ -125,6 +126,9 @@
 					for (let i = 0; i < elements_to_hide.length; i++) {
 						elements_to_hide[i].style.visibility = 'hidden';
 					}
+					main_title_element.textContent = 'HAPPY 1ST ANNIVERSARY!!';
+					main_title_element.style.fontSize = '50px';
+					main_title_element.style.fontStyle = 'italic';
 				} else {
 					const imageSources = [
 						'images/dudu-waiting-dudu-cute.gif',

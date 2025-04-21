@@ -70,10 +70,12 @@
 					<div class="display-t">
 						<div class="display-tc animate-box" data-animate-effect="fadeIn">
 							<a href="index.html" style="font-size: 10px;color: rgb(145, 145, 145); background-color: rgb(37, 37, 37);padding: 5px;" onmouseover="this.style.color='white';" onmouseout="this.style.color='rgb(145, 145, 145)';">REPLAY INTRO</a>
+							<br>
 							<h1 style="font-size: clamp(50px, 8vw, 100px); padding-top: 100px;">Anniversary Surprise</h1>
 							<br/>
 							<br/>
-							<br/>
+							<!-- <p style="font-size: 12px ;">04 - 22 - 2025</p> -->
+							<!-- <p id="created_by" style="opacity: 0; transition: opacity 1s ease;">• ^_^</p> -->
 							<i style="color: rgb(204, 204, 204);">Choose one below</i>
 							<br/>
 							<br/>
@@ -82,31 +84,60 @@
 							<!-- <h2><i>April 22, 2025</i></h2> -->
 							<div style="display: flex; justify-content: center; gap: 10px; flex-wrap: wrap;"></div>
 									<style>
-										button:hover {
+										.delayed-button:hover {
 											transform: scale(1.1);
 											transition: transform 0.3s ease;
 										}
 									</style>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px; fill:white;" onclick="window.location.href='anniversary_card.html';">
+									<script>
+										
+										document.addEventListener("DOMContentLoaded", function () {
+											const buttons = document.querySelectorAll(".delayed-button");
+											const created_by_element = document.getElementById("created_by");
+											buttons.forEach((button, index) => {
+												setTimeout(() => {
+													button.style.opacity = "1";
+													button.style.transform = "translateY(0)";
+												}, (index+1) * 1000);
+											});
+											setTimeout(() => {
+												const createdByElement = document.getElementById("created_by");
+												createdByElement.style.opacity = "1";
+											}, 3000);
+										});
+										
+										
+									</script>
+									<style>
+										.delayed-button {
+											opacity: 0;
+											transform: translateY(20px);
+											transition: opacity 1s ease, transform 0.5s ease;
+										}
+									</style>
+									<button class="delayed-button" style="width: 100px; background: transparent; border: none; margin: 10px; fill:white;" onclick="window.location.href='anniversary_card.html';">
 										<img src="images/greetings1.svg" alt="Greetings" style="fill: white;">
 										<br><br>
 										<i>Card</i>
 									</button>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='pick_a_message.html';">
+									<button class="delayed-button" style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='pick_a_message.html';">
 										<img src="images/bottle_heart.svg" alt="Greetings" style="fill: white;">
 										<br><br>
 										<p>Bottle</p>
 									</button>
-									<button style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='our_story.html';">
+									<button class="delayed-button" style="width: 100px; background: transparent; border: none; margin: 10px;" onclick="window.location.href='our_story.html';">
 										<img src="images/story_milestone.svg" alt="Greetings" style="fill: white;">
 										<br><br>
 										<p>Our Story</p>
-									</button>	
+									</button>
 							</div>
+							
 						</div>
 						<!-- <div>
 							<a href="index.html" style="font-size: 12px;color: rgb(145, 145, 145);">◀ PLAY BACK INTRO</a>
 						</div> -->
+						<!-- <p id="created_by" style="opacity: 0; transition: opacity 1s ease;">• ^_^</p> -->
+						
 					</div>
 				</div>
 			</div>
